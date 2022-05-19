@@ -27,12 +27,21 @@ int knapsack (int profits[], int weights[], int pw[], int m, int n)
 
 int main()
 {
-    int profits[] = {100, 60, 120},
-        weights[] = {20, 10, 30},
-        pw[] = {5, 6, 4},
-        m = 50, n =3; 
-    int i, j, temp1, temp2, temp3;
-    
+    int i, j, n, m, temp1, temp2, temp3;
+    int profits[100], weights[100], pw[100];
+    //input
+    cout<<"Enter the number of items: ";
+    cin>>n;
+    for ( i = 0; i < n; i++)
+    {
+        cout<<"Enter Profit "<<i+1<<": ";
+        cin>>profits[i];
+        cout<<"Enter Weight "<<i+1<<": ";
+        cin>>weights[i];
+    }
+    cout<<"Enter the capacity of the sack: ";
+    cin>>m;
+
     //sorting
         for (i=0; i<n-1; i++) {
             for (j=0; j<n-1-i; j++) {
